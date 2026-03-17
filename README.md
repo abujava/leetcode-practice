@@ -1,2 +1,5 @@
-Hi there, this is my [LeetCode](https://leetcode.com) Solutions. <br/>
-My leetcode account 👉 https://leetcode.com/abujava/
+# LeetCode Solutions (Java)
+
+This repository contains my solutions to LeetCode problems implemented in Java. I use it to practice data structures, algorithms, and problem-solving techniques.
+
+LeetCode profile: https://leetcode.com/seniorali/
