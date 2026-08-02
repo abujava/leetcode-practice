@@ -12,13 +12,13 @@ public class P0486_PredictTheWinner {
         return getScoreDiff(nums, 0, nums.length - 1) >= 0;
     }
 
-    private static int getScoreDiff(int[] nums, int front, int tail) {
-        if (front == tail) return nums[front];
+    private static int getScoreDiff(int[] nums, int front, int end) {
+        if (front == end) return nums[front];
 
-        int pickStart = nums[front] - getScoreDiff(nums, front + 1, tail);
-        int pickEnd = nums[tail] - getScoreDiff(nums, front, tail - 1);
+        int pickFront = nums[front] - getScoreDiff(nums, front + 1, end);
+        int pickEnd = nums[end] - getScoreDiff(nums, front, end - 1);
 
-        return Math.max(pickStart, pickEnd);
+        return Math.max(pickFront, pickEnd);
     }
 
     public static void main(String[] args) {
