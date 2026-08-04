@@ -3,7 +3,7 @@ package com.seniorali.problems.concurrency;
 /**
  * Problem: <a href="https://leetcode.com/problems/print-foobar-alternately">1115. Print FooBar Alternately</a><br/>
  * <p>
- * Difficulty: <code>Easy</code>
+ * Difficulty: <code>Medium</code>
  * <p>
  * Topics: <code>Concurrency</code>
  */
