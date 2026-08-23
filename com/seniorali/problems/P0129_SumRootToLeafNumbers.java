@@ -12,19 +12,17 @@ import java.util.Objects;
  * Topics: {@code Tree}, {@code Binary Tree}, {@code Deep First Search}
  */
 public class P0129_SumRootToLeafNumbers {
-    public int sumNumbers(TreeNode root) {
-        if (root == null) return 0;
 
-        return sumNumbers(root, "");
+    public int sumNumbers(TreeNode root) {
+        return traverse(root, 0);
     }
 
-    private int sumNumbers(TreeNode root, String path) {
-        String currentPath = path + root.val;
-        if (root.left == null && root.right == null) {
-            return Integer.parseInt(currentPath);
-        } else if (root.left != null && root.right != null) {
-            return sumNumbers(root.left, currentPath) + sumNumbers(root.right, currentPath);
-        } else
-            return sumNumbers(Objects.requireNonNullElseGet(root.left, () -> root.right), currentPath);
+    private int traverse(TreeNode node, int currentSum) {
+        if (node == null)
+            return 0;
+        int sum = currentSum * 10 + node.val;
+        if (node.left == null && node.right == null)
+            return sum;
+        return traverse(node.left, sum) + traverse(node.right, sum);
     }
 }
