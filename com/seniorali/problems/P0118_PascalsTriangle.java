@@ -10,7 +10,6 @@ import java.util.List;
  * Topics: {@code Array}, {@code Dynamic Programming}
  */
 public class P0118_PascalsTriangle {
-
     public static List<List<Integer>> generate(int n) {
         List<List<Integer>> list = new ArrayList<>(n);
         list.add(List.of(1));
@@ -31,17 +30,4 @@ public class P0118_PascalsTriangle {
 
         return list;
     }
-
-    public static void main(String[] args) {
-        System.out.println(generate(5));
-    }
 }
-/*
-
-[1]
-[1, 1]
-[1, 2, 1]
-[1, 3, 3, 1]
-[1, 4, 6, 4, 1]
-
-* * */
